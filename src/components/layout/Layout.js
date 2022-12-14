@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react';
+import { ScrollButton } from '../button';
 import Header from './Header';
 
 const Layout = ({children}) => {
@@ -6,6 +7,7 @@ const Layout = ({children}) => {
         <Fragment>
             <Header></Header>
             {children}
+            <ScrollButton></ScrollButton>
         </Fragment>
     );
 };

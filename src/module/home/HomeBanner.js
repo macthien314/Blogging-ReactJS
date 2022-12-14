@@ -10,6 +10,7 @@ const HomeBannerStyles = styled.div`
     ${(props) => props.theme.primary},
     ${(props) => props.theme.secondary}
   );
+  margin-top: 100px;
   margin-bottom: 60px;
   .banner {
     display: flex;

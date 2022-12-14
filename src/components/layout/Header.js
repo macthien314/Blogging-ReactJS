@@ -19,10 +19,20 @@ const menuLinks = [
 ];
 const HeaderStyles = styled.header`
 //40px
-  padding: 20px 0; 
+
+  position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding: 20px 0; 
+   z-index: 100;
+   background-color: #fff ;
+   box-shadow: 0 0 1px 1px rgba(20, 23, 28, 0.1), 0 3px 1px 0 rgba(20, 23, 28, 0.1);
   .header-main {
     display: flex;
     align-items: center;
+
   }
   .header-auth {
     display: flex;
@@ -85,7 +95,7 @@ const HeaderStyles = styled.header`
 
 const Header = () => {
 
-  const {userInfo} = useAuth();
+  const { userInfo } = useAuth();
 
   return (
     <HeaderStyles>
@@ -144,8 +154,8 @@ const Header = () => {
             </span>
           </div>
           {!userInfo ? <Button kind="primary" type="button" height="56px" className='header-button' to='/sign-in'>Login</Button>
-          : <div className="header-auth">
-          <Button
+            : <div className="header-auth">
+              <Button
                 type="button"
                 height="56px"
                 className="header-button"
@@ -153,7 +163,7 @@ const Header = () => {
               >
                 Dashboard
               </Button>
-          </div>
+            </div>
           }
         </div>
       </div>

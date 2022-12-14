@@ -1,3 +1,4 @@
 import Button from './Button'
+import ScrollButton from './ScrollButton'
 
-export {Button};
+export {Button, ScrollButton};
